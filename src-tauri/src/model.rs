@@ -20,7 +20,8 @@ impl BertInferenceModel {
         embeddings_filename: &str,
         embeddings_key: &str,
     ) -> anyhow::Result<Self> {
-        let device = Device::Cpu;
+        let device = Device::Cpu;        
+
         // load the embeddings from a file
         let embeddings = match embeddings_filename.is_empty() {
             true => {
